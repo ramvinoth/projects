@@ -41,7 +41,7 @@ if( $is_active_proj || (SES_TYPE==3)){
 			<?php if(ACCOUNT_STATUS!=2){ //$is_active_proj && ACCOUNT_STATUS!=2?>
 			<?php if($is_active_proj){?>
 			<li class="new_task_li">
-				<button class="btn new_task" type="button" onclick="creatask();"><i class="icon-new-task"></i>Create Task</button>
+				<button class="btn new_task" type="button" onclick="creatask();"><i class="fa fa-plus"></i><span>Create Task</span></button>
 			</li>
                         <?php }else {?>
                         <li class="new_task_li">
@@ -49,36 +49,36 @@ if( $is_active_proj || (SES_TYPE==3)){
 			</li>
 			<?php } }?>
 			
-			<li class="allmenutab <?php if(CONTROLLER == "easycases" && (PAGE_NAME == "mydashboard")) { echo 'active'; } ?>"><a href="<?php echo HTTP_ROOT.'mydashboard';?>"><i class="menu_sprite_ico menu_sprite_ico_dashboard"></i> Timeline</a></li>
-			<li class="allmenutab <?php if(CONTROLLER == "easycases" && (PAGE_NAME == "mydashboard")) { echo 'active'; } ?>"><a href="<?php echo HTTP_ROOT.'mydashboard';?>"><i class="menu_sprite_ico menu_sprite_ico_dashboard"></i> Dashboard</a></li>
+			<li class="allmenutab <?php if(CONTROLLER == "easycases" && (PAGE_NAME == "feed")) { echo 'active'; } ?>"><a href="<?php echo HTTP_ROOT.'mydashboard';?>"><i class="fa fa-list-alt"></i> Timeline</a></li>
+			<li class="allmenutab <?php if(CONTROLLER == "easycases" && (PAGE_NAME == "mydashboard")) { echo 'active'; } ?>"><a href="<?php echo HTTP_ROOT.'mydashboard';?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
 			
-			<li class="menu-cases"><a href="<?php echo HTTP_ROOT.'dashboard#tasks';?>" onclick="checkHashLoad('tasks')"><i class="menu_sprite_ico menu_sprite_ico_task"></i> Tasks<span class="notify" id="taskCnt" style="display: none;" rel="tooltip" title=""></span></a></li>
-			<li class="menu-files"><a href="<?php echo HTTP_ROOT.'dashboard#files';?>" onclick="checkHashLoad('files')"><i class="menu_sprite_ico menu_sprite_ico_file"></i> Files<span class="notify" id="fileCnt" style="display: none;" rel="tooltip" title=""></span></a></li>
+			<li class="menu-cases"><a href="<?php echo HTTP_ROOT.'dashboard#tasks';?>" onclick="checkHashLoad('tasks')"><i class="fa fa-calendar-check-o"></i> Tasks<span class="notify" id="taskCnt" style="display: none;" rel="tooltip" title=""></span></a></li>
+			<li class="menu-files"><a href="<?php echo HTTP_ROOT.'dashboard#files';?>" onclick="checkHashLoad('files')"><i class="fa fa-paperclip"></i> Files<span class="notify" id="fileCnt" style="display: none;" rel="tooltip" title=""></span></a></li>
 			
-			<li class="menu-milestone <?php if(CONTROLLER == "milestones" && (PAGE_NAME == "milestone")) { echo 'active'; }?>"><a href="<?php echo HTTP_ROOT.'dashboard#milestonelist';?>" onclick="checkHashLoad('milestonelist')"><i class="menu_sprite_ico menu_sprite_ico_milestone"></i> Milestones</a></li>
+			<li class="menu-milestone <?php if(CONTROLLER == "milestones" && (PAGE_NAME == "milestone")) { echo 'active'; }?>"><a href="<?php echo HTTP_ROOT.'dashboard#milestonelist';?>" onclick="checkHashLoad('milestonelist')"><i class="fa fa-map-signs"></i> Milestones</a></li>
 			
 			
 			
-            <li class="allmenutab <?php if(CONTROLLER == "projects" && (PAGE_NAME == "manage")) { echo 'active'; } ?>"><a href="<?php echo HTTP_ROOT.'projects/manage';?>"><i class="menu_sprite_ico menu_sprite_ico_proj"></i> Projects</a></li>
+            <li class="allmenutab <?php if(CONTROLLER == "projects" && (PAGE_NAME == "manage")) { echo 'active'; } ?>"><a href="<?php echo HTTP_ROOT.'projects/manage';?>"><i class="fa fa-folder-open-o"></i> Projects</a></li>
 			<?php
 			if(SES_TYPE == 1 || SES_TYPE == 2)
 			{
 			?>
-				<li class="allmenutab <?php if(CONTROLLER == "users" && (PAGE_NAME == "manage")) { echo 'active'; } ?>"><a href="<?php echo HTTP_ROOT.'users/manage';?>"><i class="menu_sprite_ico menu_sprite_ico_usr"></i> Users</a></li>
-				<li class="allmenutab <?php if(CONTROLLER == "projects" && (PAGE_NAME == "groupupdatealerts")) { echo 'active'; } ?>"><a href="<?php echo HTTP_ROOT.'reminder-settings';?>"><i class="menu_sprite_ico menu_sprite_ico_gupd"></i> Daily Catch-Up</a></li>  
+				<li class="allmenutab <?php if(CONTROLLER == "users" && (PAGE_NAME == "manage")) { echo 'active'; } ?>"><a href="<?php echo HTTP_ROOT.'users/manage';?>"><i class="fa fa-users"></i> Users</a></li>
+				<li class="allmenutab <?php if(CONTROLLER == "projects" && (PAGE_NAME == "groupupdatealerts")) { echo 'active'; } ?>"><a href="<?php echo HTTP_ROOT.'reminder-settings';?>"><i class="fa fa-envelope-o"></i> Daily Catch-Up</a></li>  
 			<?php
 			}
 			?>
 			
 
-			<li <?php if((CONTROLLER == "archives" && (PAGE_NAME == "listall")) || CONTROLLER == "templates") { echo 'style="display:block;"'; }?><?php if(CONTROLLER == "reports" && (PAGE_NAME == "glide_chart" || PAGE_NAME == "hours_report" || PAGE_NAME == "chart" || PAGE_NAME == "weeklyusage_report")) { echo "class='active more_menu_li'"; echo ' style="display:block;"'; } else { if(SES_TYPE != 3) { echo " class='more_menu_li'"; } } ?>><a href="<?php echo HTTP_ROOT.'task-report/';?>"><i class="menu_sprite_ico menu_sprite_ico_anltc"></i> Analytics</a></li>
+			<li <?php if((CONTROLLER == "archives" && (PAGE_NAME == "listall")) || CONTROLLER == "templates") { echo 'style="display:block;"'; }?><?php if(CONTROLLER == "reports" && (PAGE_NAME == "glide_chart" || PAGE_NAME == "hours_report" || PAGE_NAME == "chart" || PAGE_NAME == "weeklyusage_report")) { echo "class='active more_menu_li'"; echo ' style="display:block;"'; } else { if(SES_TYPE != 3) { echo " class='more_menu_li'"; } } ?>><a href="<?php echo HTTP_ROOT.'task-report/';?>"><i class="fa fa-pie-chart"></i> Analytics</a></li>
 			
-			<li <?php if((CONTROLLER == "reports" && (PAGE_NAME == "glide_chart" || PAGE_NAME == "hours_report" || PAGE_NAME == "chart" || PAGE_NAME == "weeklyusage_report")) || CONTROLLER == "templates") { echo 'style="display:block;"'; }?> <?php if(CONTROLLER == "archives" && (PAGE_NAME == "listall")) { echo "class='active more_menu_li'"; echo ' style="display:block;"'; } else { if(SES_TYPE != 3) { echo " class='more_menu_li'"; } } ?>><a href="<?php echo HTTP_ROOT.'archives/listall#caselist';?>"><i class="menu_sprite_ico menu_sprite_ico_arch"></i> Archive</a></li>
+			<li <?php if((CONTROLLER == "reports" && (PAGE_NAME == "glide_chart" || PAGE_NAME == "hours_report" || PAGE_NAME == "chart" || PAGE_NAME == "weeklyusage_report")) || CONTROLLER == "templates") { echo 'style="display:block;"'; }?> <?php if(CONTROLLER == "archives" && (PAGE_NAME == "listall")) { echo "class='active more_menu_li'"; echo ' style="display:block;"'; } else { if(SES_TYPE != 3) { echo " class='more_menu_li'"; } } ?>><a href="<?php echo HTTP_ROOT.'archives/listall#caselist';?>"><i class="fa fa-archive"></i> Archive</a></li>
 			
 			
 			<?php if(SES_TYPE == 1 || SES_TYPE == 2) { ?>
 			<?php /*?><li class="more_menu_li"><a href="javascript:;"><i class="menu_sprite_ico menu_sprite_ico_mlstn"></i> Milestone</a></li><?php */?>
-			<li <?php if((CONTROLLER == "archives" && (PAGE_NAME == "listall")) || (CONTROLLER == "reports" && (PAGE_NAME == "glide_chart" || PAGE_NAME == "hours_report" || PAGE_NAME == "chart" || PAGE_NAME == "weeklyusage_report"))) { echo 'style="display:block;"'; }?><?php if(CONTROLLER == "templates") { echo "class='active more_menu_li'"; echo ' style="display:block;"'; } else { echo " class='more_menu_li'"; } ?>><a href="<?php echo HTTP_ROOT. 'templates/tasks';?>"><i class="menu_sprite_ico menu_sprite_ico_tmplt"></i> Template</a></li>
+			<li <?php if((CONTROLLER == "archives" && (PAGE_NAME == "listall")) || (CONTROLLER == "reports" && (PAGE_NAME == "glide_chart" || PAGE_NAME == "hours_report" || PAGE_NAME == "chart" || PAGE_NAME == "weeklyusage_report"))) { echo 'style="display:block;"'; }?><?php if(CONTROLLER == "templates") { echo "class='active more_menu_li'"; echo ' style="display:block;"'; } else { echo " class='more_menu_li'"; } ?>><a href="<?php echo HTTP_ROOT. 'templates/tasks';?>"><i class="fa fa-copy"></i> Template</a></li>
 			
 			<li <?php if((CONTROLLER == "templates") || (CONTROLLER == "archives" && (PAGE_NAME == "listall")) || (CONTROLLER == "reports" && (PAGE_NAME == "glide_chart" || PAGE_NAME == "hours_report" || PAGE_NAME == "chart" || PAGE_NAME == "weeklyusage_report"))) { echo "class='close'"; }else{ echo 'class=""'; } ?>>
 				<a href="javascript:void(0);" class="more_in_menu">
@@ -96,7 +96,7 @@ if( $is_active_proj || (SES_TYPE==3)){
 			  <ul class="dropdown-menu customFilter"></ul>
 			</li>-->
 			<li class="dropdown cust_rec" id="recentCases" <?php if(((CONTROLLER == "templates") || (CONTROLLER == "archives" && (PAGE_NAME == "listall")) || (CONTROLLER == "reports" && (PAGE_NAME == "glide_chart" || PAGE_NAME == "hours_report" || PAGE_NAME == "chart" || PAGE_NAME == "weeklyusage_report"))) && (SES_TYPE == 1 || SES_TYPE == 2)) { echo 'style="display:none;"'; } ?>>
-			  <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" onclick="openAjaxRecentCase();"><i class="menu_sprite_ico menu_sprite_ico_rec"></i> Recently viewed 
+			  <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" onclick="openAjaxRecentCase();"><i class="fa fa-eye"></i> Recently viewed 
 			  <b class="menu_more_arr"></b></a>
 			  <div style="float:left;display:none;margin-left:70px;" class="recentViewLoader">
 				 <img width="16" height="16" title="loading..." alt="loading..." src="<?php echo HTTP_ROOT;?>img/images/loading_dark_nested.gif">

@@ -236,16 +236,16 @@ if(CONTROLLER == "users" && (PAGE_NAME == "upgrade_member")) { ?>
 	<?php } ?>
 	<?php if(PAGE_NAME=='dashboard'){?>
 	<li  class="kanbn dashborad-view-type" id="select_view">
-	<a href="<?php echo HTTP_ROOT.'dashboard#tasks';?>" onclick="checkHashLoad('tasks');"><div id="lview_btn" class="btn gry_btn kan30" title="List View"><i class="icon-list-view"></i></div></a>
-	<a href="<?php echo HTTP_ROOT.'dashboard#tasks';?>" onclick="checkHashLoad('compactTask');"><div id="cview_btn" class="btn gry_btn kan30" title="Compact View"><i class="icon-compact-view"></i></div></a>
-	<a href="<?php echo HTTP_ROOT.'dashboard#kanban';?>" onclick="checkHashLoad('kanban');"><div id="kbview_btn" class="btn gry_btn kan30" style="border-radius:0 3px 3px 0"  title="Kanban View"><i class="icon-kanv-view"></i></div></a>
-	<a href="<?php echo HTTP_ROOT.'dashboard#activities';?>" onclick="checkHashLoad('activities');"><div id="actvt_btn" class="btn gry_btn kan30" style="border-radius:0 3px 3px 0"  title="Activities"><i class="icon-actvt-view"></i></div></a>
-	<a href="<?php echo HTTP_ROOT.'dashboard#calendar';?>" onclick="calendarView('calendar');"><div id="calendar_btn" class="btn gry_btn kan30" style="border-radius:0 3px 3px 0"  title="Calendar"><img src="<?php echo HTTP_ROOT; ?>img/calendar.png" style="margin-top:-8px;margin-left:-2px"></img></div></a>
+	<a href="<?php echo HTTP_ROOT.'dashboard#tasks';?>" onclick="checkHashLoad('tasks');"><div id="lview_btn" class="btn gry_btn kan30" title="List View"><i class="fa fa-list-ul"></i></div></a>
+	<a href="<?php echo HTTP_ROOT.'dashboard#tasks';?>" onclick="checkHashLoad('compactTask');"><div id="cview_btn" class="btn gry_btn kan30" title="Compact View"><i class="fa fa-align-justify"></i></div></a>
+	<a href="<?php echo HTTP_ROOT.'dashboard#kanban';?>" onclick="checkHashLoad('kanban');"><div id="kbview_btn" class="btn gry_btn kan30" style="border-radius:0 3px 3px 0"  title="Kanban View"><i class="fa fa-trello"></i></div></a>
+	<a href="<?php echo HTTP_ROOT.'dashboard#activities';?>" onclick="checkHashLoad('activities');"><div id="actvt_btn" class="btn gry_btn kan30" style="border-radius:0 3px 3px 0"  title="Activities"><i class="fa fa-list-alt"></i></div></a>
+	<a href="<?php echo HTTP_ROOT.'dashboard#calendar';?>" onclick="calendarView('calendar');"><div id="calendar_btn" class="btn gry_btn kan30" style="border-radius:0 3px 3px 0"  title="Calendar"><i class="fa fa-calendar" style="margin-top:-8px;margin-left:-2px"></i></div></a>
 	</li>
 	<?php } ?>
 	<li  class="kanbn dashborad-view-type" id="select_view_mlst" style="display: none;">
-		<a href="<?php echo HTTP_ROOT.'dashboard#milestone';?>" onclick="checkHashLoad('milestone');" ><div id="mlview_btn" class="btn gry_btn kan30" title="Manage Milestone"><i class="icon-list-view"></i></div></a>
-		<a href="<?php echo HTTP_ROOT.'dashboard#milestonelist';?>" onclick="checkHashLoad('milestonelist');"><div id="mkbview_btn" class="btn gry_btn kan30" style="border-radius:0 3px 3px 0"  title="Milestone Kanban View"><i class="icon-kanv-view"></i></div></a>
+		<a href="<?php echo HTTP_ROOT.'dashboard#milestone';?>" onclick="checkHashLoad('milestone');" ><div id="mlview_btn" class="btn gry_btn kan30" title="Manage Milestone"><i class="fa fa-list"></i></div></a>
+		<a href="<?php echo HTTP_ROOT.'dashboard#milestonelist';?>" onclick="checkHashLoad('milestonelist');"><div id="mkbview_btn" class="btn gry_btn kan30" style="border-radius:0 3px 3px 0"  title="Milestone Kanban View"><i class="fa fa-trello"></i></div></a>
 		<!--<a href="javascript:void(0);" onclick="addEditMilestone(this);" id="mlist_crt_mlstbtn" class="mlstlink_new" data-name="" data-uid="" data-id="">Create Milestone</a>-->
 		<button style="margin-left:25px;" onclick="addEditMilestone(this);" id="mlist_crt_mlstbtn" type="button" value="Create Milestone" class="btn btn_blue">    Create Milestone   </button>
 	</li>

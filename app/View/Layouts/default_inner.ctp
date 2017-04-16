@@ -11,6 +11,7 @@
 echo $this->Html->css('bootstrap.min_1');
 echo $this->Html->css('style_inner.css?v='.RELEASE);
 echo $this->Html->css('jquery-ui');
+echo $this->Html->css('font-awesome.min.css');
 
 if(PAGE_NAME == "mydashboard" || PAGE_NAME == "dashboard" || PAGE_NAME=='milestonelist') {
 	echo $this->Html->css('jquery.jscrollpane');

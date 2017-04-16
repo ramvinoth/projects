@@ -1,10 +1,15 @@
 /*Ram's space (Custom design)*/
-.navbar-inverse .navbar-nav>li>a{
-	    color: #fff;
+ul.side-nav > li>a>i.fa{
+	margin-right: 5px;
 }
-nav navbar-nav navbar-right navbar-user ie_navbar_top{
+.navbar-inverse .navbar-nav>li>a{
+	color: #a2a2a2;
+	font-weight: 200;
+}
+ul.nav.navbar-nav.navbar-right.navbar-user.ie_navbar_top{
 	margin-top: 10px;
 }
+
 /*Home Top NavBar*/
 .navbar-inverse {
     background-color: #3c8dbc;
@@ -25,13 +30,25 @@ nav navbar-nav navbar-right navbar-user ie_navbar_top{
     font-size: 20px;
 }
 /* Top Navbar END*/
+
+
 /* Side Navbar START*/
 .navbar-inverse .side-nav>li a:hover {
-	font-weight: 100;
+	font-weight: 200;
 }
 .navbar-inverse .side-nav>li.active a {
 	 background-color: #367fa9;
-    font-weight: 100;
+    font-weight: 200;
+}
+.side-nav>li.allmenutab >a{
+	border-bottom: /*1px solid #434648*/ none;
+}
+.side-nav>li>a {
+    border-top: none;
+    border-bottom: /*1px solid #434648*/ none;
+}
+li.new_task_li>button>i{
+	margin-right: 5px;
 }
 /* Side Navbar END*/
 
@@ -192,22 +209,22 @@ table.tablesorter thead tr th:hover {
 }
 .side-nav .new_task,.orange_btn{
 	/*background:#ff9600;*/
-	background-image:-webkit-linear-gradient(top, #43C86F, #2FB45B);
-	background-image: -ms-linear-gradient(top, #43C86F, #2FB45B);
-	background-image: -o-linear-gradient(top, #43C86F, #2FB45B);
-	background-image: linear-gradient(to bottom, #43C86F, #2FB45B);
-	background-image: -moz-linear-gradient(top, #43C86F, #2FB45B);
+	background-image:-webkit-linear-gradient(top, #3c8dbc, #3c8dbc);
+	background-image: -ms-linear-gradient(top, #3c8dbc, #3c8dbc);
+	background-image: -o-linear-gradient(top, #3c8dbc, #3c8dbc);
+	background-image: linear-gradient(to bottom, #3c8dbc, #3c8dbc);
+	background-image: -moz-linear-gradient(top, #3c8dbc, #3c8dbc);
 
 	color:#fff;
-	font-size:16px;
-	font-weight:bold;
+	font-size:14px;
+	font-weight:300;
 	text-shadow:1px 1px 1px rgba(0,0,0,0.35);
 	position:relative;
-	padding-left:34px;
+	padding-left:10px;
 	margin:0px auto;
-	 font-family:'HelveticaNeue-Regular';
+	font-family:'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif';
 }
-.side-nav .new_task:hover,.orange_btn:hover{background:/*#F48B02*/#2fb45b;}
+.side-nav .new_task:hover,.orange_btn:hover{background: #296182;}
 .new_task > .icon-new-task:before{
 	background:url(../img/sprite_osv2.png) -67px 0px;
 	height:23px;
@@ -870,9 +887,9 @@ td.file_pdr a.file_name_ipad{max-width:460px;white-space:nowrap;text-overflow:el
   }
 
   .side-nav>li>a {
-	width: 175px;
+	width: 185px;
 	position:relative;
-	padding-left:34px;
+	padding-left:0px;
 	/*text-shadow:1px 1px 1px #14496e;*/
 	border-left:4px dotted transparent;
   }
@@ -1477,7 +1494,7 @@ table.tsk_tbl .tab_tr a{color:#555}
 .wrap-txt{max-width: 375px;overflow: hidden;}
 
 /* TASK Details page starts here */
-.task_action_bar{background:/*#E3EAF4*/#eee;border-bottom: 1px solid #DCDADB;padding:6px 215px 6px 25px;position: fixed;width:100%;z-index:1;}
+.task_action_bar{background:/*#E3EAF4*/#eee;border-bottom: 1px solid #DCDADB;padding:22px 215px 6px 25px;position: fixed;width:100%;z-index:1;}
 
 
 
@@ -1642,7 +1659,7 @@ b.pr_low{color:#b4a532;border:0;}
 .attch_file_bg div:nth-child(2){margin-left:5px;padding-top:2px;}
 
 .btn.gry_btn.smal30{height: 29px;padding: 4px;text-align:center;width: 29px;border-radius:5px;margin-right:3px;}
-.btn.gry_btn.kan30{height:27px;padding: 5px;text-align:center;width: 30px;border-radius:3px 0 0 3px;margin-right:-5px;margin-top:-4px}
+.btn.gry_btn.kan30{height:27px;padding: 2px;text-align:center;width: 30px;border-radius:3px 0 0 3px;margin-right:-5px;margin-top:-4px}
 .btn.gry_btn.kan30:hover{background:#B8B8B8}
 .asign_block{margin:0 0 10px;font-size:18px;}
 .round_profile_img.asignto {border: 2px solid #CCCCCC;height: 60px;margin:0 10px 0 0;width:60px;}
